@@ -39,7 +39,7 @@ names(total_steps) <- c("date", "steps")
 ```
 
 - Make histogram plot
-Use ggplot2 to plot with binwidth = 500. (Output of library loading is not included here)
+Use ggplot2 to plot with binwidth = 500. 
 ```{r} 
 library(ggplot2)
 ```
