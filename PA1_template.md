@@ -53,6 +53,7 @@ library(dplyr)
 ```
 
 ##What is mean total number of steps taken per day?
+
 1. Make a histogram of the total number of steps taken each day
 
 - Aggregate data to calculate the sum by date column
@@ -95,6 +96,7 @@ median(total_steps$steps)
 ```
 
 ##What is the average daily activity pattern?
+
 1.Make a time series plot (i.e. ```type = "l"```) of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all days (y-axis)
 
 - Aggregate data to calculate mean of steps by interval
@@ -128,6 +130,7 @@ mean_steps[which.max(mean_steps$steps),]
 ```
 
 ##Imputing missing values
+
 1. Calculate and report the total number of missing values in the dataset (i.e. the total number of rows with ```NA```s)
 
 Use ```sum()``` and ```is.na()``` to calculate the number of missing values in the dataset. From the output of ```summary()```, the missing values are in ```steps``` column. 
@@ -155,6 +158,7 @@ sum(is.na(activity$steps))
 ```
 ## [1] 2304
 ```
+
 2. Devise a strategy for filling in all of the missing values in the dataset. The strategy does not need to be sophisticated. For example, you could use the mean/median for that day, or the mean for that 5-minute interval, etc.
 
 - The mean of the same 5-minute interval as the missing value is used to fill in the missing values in the dataset.
@@ -258,6 +262,7 @@ sum(mean_steps$steps)
 And this changes the mean and median values of ```activity2``` dataset.
 
 ##Are there differences in activity patterns between weekdays and weekends?
+
 1. Create a new factor variable in the dataset with two levels - "weekday" and "weekend" indicating whether a given date is a weekday or weekend day.
 
 

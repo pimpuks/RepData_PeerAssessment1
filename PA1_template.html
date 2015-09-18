@@ -238,8 +238,11 @@ The first step is to load data from csv file with the opition of <code>stringsAs
 <pre><code class="r">library(dplyr)
 </code></pre>
 
-<p>##What is mean total number of steps taken per day?
-1. Make a histogram of the total number of steps taken each day</p>
+<p>##What is mean total number of steps taken per day?</p>
+
+<ol>
+<li>Make a histogram of the total number of steps taken each day</li>
+</ol>
 
 <ul>
 <li>Aggregate data to calculate the sum by date column</li>
@@ -279,8 +282,9 @@ Use ggplot2 to plot with binwidth = 500. </li>
 <pre><code>## [1] 10395
 </code></pre>
 
-<p>##What is the average daily activity pattern?
-1.Make a time series plot (i.e. <code>type = &quot;l&quot;</code>) of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all days (y-axis)</p>
+<p>##What is the average daily activity pattern?</p>
+
+<p>1.Make a time series plot (i.e. <code>type = &quot;l&quot;</code>) of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all days (y-axis)</p>
 
 <ul>
 <li>Aggregate data to calculate mean of steps by interval</li>
@@ -314,8 +318,11 @@ The interval which has maximum number of steps is interval 835.</li>
 ## 1      835 206.1698
 </code></pre>
 
-<p>##Imputing missing values
-1. Calculate and report the total number of missing values in the dataset (i.e. the total number of rows with <code>NA</code>s)</p>
+<p>##Imputing missing values</p>
+
+<ol>
+<li>Calculate and report the total number of missing values in the dataset (i.e. the total number of rows with <code>NA</code>s)</li>
+</ol>
 
 <p>Use <code>sum()</code> and <code>is.na()</code> to calculate the number of missing values in the dataset. From the output of <code>summary()</code>, the missing values are in <code>steps</code> column. </p>
 
@@ -437,8 +444,11 @@ names(total_steps2) &lt;- c(&quot;date&quot;, &quot;steps&quot;)
 
 <p>And this changes the mean and median values of <code>activity2</code> dataset.</p>
 
-<p>##Are there differences in activity patterns between weekdays and weekends?
-1. Create a new factor variable in the dataset with two levels - &ldquo;weekday&rdquo; and &ldquo;weekend&rdquo; indicating whether a given date is a weekday or weekend day.</p>
+<p>##Are there differences in activity patterns between weekdays and weekends?</p>
+
+<ol>
+<li>Create a new factor variable in the dataset with two levels - &ldquo;weekday&rdquo; and &ldquo;weekend&rdquo; indicating whether a given date is a weekday or weekend day.</li>
+</ol>
 
 <pre><code class="r">daytype &lt;- function (date) {
  ifelse(weekdays(as.Date(date, &quot;%Y-%m-%d&quot;)) %in% c(&quot;Sunday&quot;, &quot;Saturday&quot;), &quot;weekend&quot;, &quot;weekday&quot;) 
